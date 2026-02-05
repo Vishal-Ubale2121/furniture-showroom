@@ -86,20 +86,38 @@ header {
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border-bottom: 1px solid var(--border);
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: 0.75rem var(--spacing-lg);
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo {
+  height: 42px;
+  width: 42px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: var(--transition-bounce);
+}
+
+.logo-container:hover .header-logo {
+  transform: scale(1.1) rotate(-5deg);
+}
+
 h1 {
   font-family: 'Algerian', 'Cinzel Decorative', var(--font-display);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: var(--text-main);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  margin: 0;
 }
 
 h2,
